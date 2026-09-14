@@ -25,13 +25,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Create authentication states
-        run: |
-          npx tsx login-user.ts
-          npx tsx login-admin.ts
-
       - name: Run Playwright tests
-        run: npx playwright test tests/role-access.spec.ts --project=chromium
+        run: npx playwright test --project=chromium
 
       - name: Upload Playwright report
         if: always()

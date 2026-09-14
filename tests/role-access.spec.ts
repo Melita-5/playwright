@@ -3,6 +3,9 @@ import { test, expect, chromium } from '@playwright/test';
 const BASE = 'https://practicesoftwaretesting.com';
 
 test.describe('Role-Based Access Tests', () => {
+  test.skip(!!process.env.CI, 'Target site is behind Cloudflare bot protection and blocks CI runners');
+
+//test.describe('Role-Based Access Tests', () => {
 
   test('Regular user sees customer area and is blocked from admin', async () => {
     const browser = await chromium.launch();

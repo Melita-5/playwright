@@ -7,5 +7,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["tests", "playwright.config.ts", "login-user.ts", "old-tests/test.spec.ts", "old-tests/example.spec.ts"]
+  "include": ["tests", "playwright.config.ts", "login-user.ts", "old-tests/test.spec.ts", "tests/example.spec.ts"]
 }

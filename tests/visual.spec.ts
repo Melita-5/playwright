@@ -3,6 +3,9 @@ import { test, expect } from '@playwright/test';
 const BASE = 'https://practicesoftwaretesting.com';
 
 test.describe('Visual checks', () => {
+  test.skip(!!process.env.CI, 'Visual baselines are win32; CI runs on Linux');
+  
+  // ... test.describe('Visual checks', () => {
 
 // Green tests are commented out because they are not working in the current version of Playwright. They will be fixed in a future version.
   test('login page looks unchanged', async ({ page }) => {
